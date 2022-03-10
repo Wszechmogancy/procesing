@@ -1,3 +1,5 @@
+
+
 void setup() {
   background(#890123);
   size(1000, 1000);
@@ -39,22 +41,49 @@ void draw() {
     Y++;
     X++;
   };
-  if (x==0) {
-    cos =0;
-  };
-  if (randX >950 && odpX ==0) {
-    randX--;
-  }
-  if(randX== 1){odpX=1;}
-  if (odpX ==1) {
+
+  //kwadraćik w randomowym miejscu
+  //if (x==0) {
+  //  cos =0;
+  //};
+  //if (randX >950 && odpX ==0) {
+  //  randX--;
+  //}
+  //if (odpX== 1) {
+  //  randX++;
+  //}
+  //if (randY >950 && odpY ==0) {
+  //  randY--;
+  //} else if (randY==950) {
+  //  odpY =1;
+  //}
+  //if (odpY ==1) {
+  //  randY++;
+  //}
+  if (randX<950 && odpX==0) {
     randX++;
   };
-  if (randY >950 && odpY ==0) {
-    randY--;
-  }else{
-    odpY =1;
-  }
-  if (odpY ==1) {
+  if (randX==950) {
+    odpX = 1;
+  };
+
+  if (odpX== 1) {
+    randX--;
+  };
+  if(randX==950 || randX==0){
+  odpX=0;
+  };
+  if (randY<950 && odpY==0) {
     randY++;
+  };
+  if (randY==950) {
+    odpY = 1;
+  };
+
+  if (odpY== 1) {
+    randY--;
   }
+  if(randY==950||randY==0){
+  odpY=0;
+  };
 }
