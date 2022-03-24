@@ -63,27 +63,27 @@ void draw() {
   if (randX<950 && odpX==0) {
     randX++;
   };
-  if (randX==950) {
+  if (randX>=950) {
     odpX = 1;
   };
 
   if (odpX== 1) {
     randX--;
   };
-  if(randX==950 || randX==0){
+  if(randX<=0){
   odpX=0;
   };
   if (randY<950 && odpY==0) {
     randY++;
   };
-  if (randY==950) {
+  if (randY>=950) {
     odpY = 1;
   };
 
   if (odpY== 1) {
     randY--;
   }
-  if(randY==950||randY==0){
+  if(randY<=0){
   odpY=0;
   };
 }
